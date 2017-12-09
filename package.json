@@ -2,12 +2,66 @@
   "name": "meteor-vue-example",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "dev": "meteor run --port=4000"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
-    "meteor-node-stubs": "~0.2.0",
-    "vue": "^2.4.2",
-    "vue-meteor-tracker": "^1.0.3"
+    "meteor-node-stubs": "~0.3.2",
+    "vue": "^2.5.9",
+    "vue-meteor-tracker": "^1.2.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.13.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-import-resolver-meteor": "^0.4.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-meteor": "^4.1.4"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "allowImportExportEverywhere": true
+    },
+    "env": {
+      "node": true,
+      "browser": true
+    },
+    "plugins": [
+      "meteor"
+    ],
+    "extends": [
+      "airbnb-base",
+      "plugin:meteor/recommended"
+    ],
+    "settings": {
+      "import/resolver": "meteor"
+    },
+    "rules": {
+      "import/no-absolute-path": 0,
+      "import/extensions": 0,
+      "import/no-extraneous-dependencies": 0,
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allow": [
+            "_id",
+            "_ensureIndex"
+          ]
+        }
+      ],
+      "object-shorthand": [
+        "error",
+        "always",
+        {
+          "avoidQuotes": false
+        }
+      ],
+      "space-before-function-paren": 0,
+      "func-names": 0,
+      "prefer-arrow-callback": 0
+    }
   }
 }
