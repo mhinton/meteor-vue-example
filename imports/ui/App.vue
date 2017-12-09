@@ -1,5 +1,6 @@
 <template>
 <div class="app">
+  <v-app>
   <h1>Simple Meteor example using Vue</h1>
   <p>
     You pressed the button {{count}} times.
@@ -9,7 +10,10 @@
     Learn more about the vue integration <a href="https://github.com/Akryum/meteor-vue-component">on GitHub</a>.
   </p>
 
-   <v-dialog v-model="dialog2" max-width="500px">
+  <div>
+    <h3>Vuetify Test</h3>
+    <v-btn color="primary" @click.stop="dialog2 = true">Open Dialog 2</v-btn>
+    <v-dialog v-model="dialog2" max-width="500px">
       <v-card>
         <v-card-title>
           Dialog 2
@@ -19,13 +23,15 @@
             v-bind:items="select"
             label="A Select List"
             item-value="text"
-          ></v-select>
+            ></v-select>
         </v-card-text>
         <v-card-actions>
           <v-btn color="primary" flat @click.stop="dialog2 = false">Close</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
+  </div>
+  </v-app>
 </div>
 </template>
 
@@ -67,16 +73,4 @@ export default {
 </script>
 
 <style>
-body {
-  margin: 30px;
-}
-
-a {
-  color: #40b883;
-  text-decoration: none;
-}
-
-h1 {
-  font-weight: normal;
-}
 </style>
