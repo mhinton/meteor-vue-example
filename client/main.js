@@ -2,8 +2,8 @@
 import {Meteor} from 'meteor/meteor';
 import {Vue} from 'meteor/akryum:vue';
 import "vuetify/dist/vuetify.min.css";
-// import Vuetify from "vuetify/dist/vuetify.min.js";
-import Vuetify from "vuetify";
+import Vuetify from "vuetify/dist/vuetify.min.js";
+// import Vuetify from "vuetify";
 
 Vue.use(Vuetify);
 
