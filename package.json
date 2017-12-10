@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
-    "dev": "meteor run --port=4000"
+    "dev": "meteor run --port=4000",
+    "pdev": "meteor run --port=4000 --production"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
